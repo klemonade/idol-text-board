@@ -49,7 +49,7 @@
 <!-- </div> -->
 <div class="absolute bottom-0 w-screen justify-between flex flex-row p-8 text-base sm:text-xl">
     <Button color="alternative" on:click={() => {cnt = (cnt - 1) < 0 ? 9: cnt - 1}}>{"<"}</Button>
-    <Button color="alternative" on:click={() => {cnt = (cnt + 1) > 10 ? 0: cnt + 1}}>{">"}</Button>
+    <Button color="alternative" on:click={() => {cnt = (cnt + 1) > 9 ? 0: cnt + 1}}>{">"}</Button>
 </div>
 </section>
 
