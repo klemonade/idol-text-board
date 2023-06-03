@@ -11,6 +11,19 @@
         // goto('/show')
         dispatch('next', {name: name.toUpperCase(), cnt})
     }
+
+    const choices = [
+        {id: 0, name: 'Thursday'},
+        {id: 1, name: 'Sunday Morning'},
+        {id: 2, name: 'Ready Set Go!'},
+        {id: 3, name: `Signal & Noise`},
+        {id: 4, name: 'Beautiful Question'},
+        {id: 5, name: 'Reality is broken'},
+        {id: 6, name: 'Hi!'},
+        {id: 7, name: 'Coffee mornings'},
+        {id: 8, name: 'Domino Dreams'},
+        {id: 9, name: 'Hello Goodbye'}
+    ]
 </script>
 
 <div class="flex flex-col justify-center items-center h-[100vh] gap-4">
@@ -19,8 +32,8 @@
     <h1>Style</h1>
     <!-- {cnt} -->
     <select bind:value={cnt} class="text-black"> 
-        {#each [0,1,2,3,4,5,6,7,8,9] as i}
-            <option value={i}>{i}</option>
+        {#each choices as choice}
+            <option value={choice.id}>{choice.name}</option>
         {/each}
     </select>
     <div />

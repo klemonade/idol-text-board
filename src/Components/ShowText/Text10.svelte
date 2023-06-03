@@ -39,16 +39,14 @@ anime.timeline({loop: true})
 	});
 </script>
 
-<div class="w-[100%] h-[100%] flex flex-col justify-center items-center">
+<div class="w-[100%] h-[100%] flex flex-col justify-center items-center overflow-hidden">
 <h1 class="ml11">
   <span class="text-wrapper relative">
     <span class="line line1"></span>
-    <span class='letters absolute top-[-50%] translate-y-[-50%]'>{name}</span>
-    <!-- <div> -->
+    <span class='letters absolute top-[200%]'>{name}</span>
       {#each name.split('') as letter}
             <span class='letter'>{letter}</span>
           {/each}
-    <!-- </div> -->
   </span>
 </h1>
 </div>

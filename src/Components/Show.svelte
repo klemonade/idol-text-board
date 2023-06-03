@@ -10,6 +10,7 @@
 	import Text8 from "./ShowText/Text8.svelte";
 	import Text9 from "./ShowText/Text9.svelte";
 	import Text10 from "./ShowText/Text10.svelte";
+	import { Button } from "flowbite-svelte";
     export let name: string | null;
     export let cnt: number
     const handleNext = () => {
@@ -17,7 +18,7 @@
         cnt = cnt % 20
     }
 </script>
-<section class="text-[10vw] w-[100%] h-screen">
+<section class="text-[10vw] w-[100%] h-screen overflow-y-hidden">
 <!-- <div class="translate-x-[-50%] left-[50%] translate-y-[-50%] top[50%] h-fit"> -->
     {#if cnt == 0}
     <Text1 {name} on:next={handleNext}/>
@@ -46,5 +47,9 @@
     <p>3</p>
     {/if}
 <!-- </div> -->
+<div class="absolute bottom-0 w-screen justify-between flex flex-row p-8 text-base sm:text-xl">
+    <Button color="alternative" on:click={() => {cnt = (cnt - 1) < 0 ? 9: cnt - 1}}>{"<"}</Button>
+    <Button color="alternative" on:click={() => {cnt = (cnt + 1) > 10 ? 0: cnt + 1}}>{">"}</Button>
+</div>
 </section>
 
