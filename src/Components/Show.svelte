@@ -18,7 +18,7 @@
         cnt = cnt % 20
     }
 </script>
-<section class="text-[10vw] w-[100%] h-screen overflow-y-hidden">
+<section class="text-[10vw] w-[100%] h-screen overflow-hidden">
 <!-- <div class="translate-x-[-50%] left-[50%] translate-y-[-50%] top[50%] h-fit"> -->
     {#if cnt == 0}
     <Text1 {name} on:next={handleNext}/>

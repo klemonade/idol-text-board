@@ -8,7 +8,10 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		files: {
+			serviceWorker: 'src/service-worker.ts', // or `src/my-sw.ts`
+		}
 	}
 };
 
