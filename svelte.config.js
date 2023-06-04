@@ -9,9 +9,6 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		files: {
-			serviceWorker: 'src/service-worker.ts', // or `src/my-sw.ts`
-		}
 	}
 };
 
