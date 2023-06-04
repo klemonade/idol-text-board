@@ -1,17 +1,15 @@
 import { sveltekit } from '@sveltejs/kit/vite'
 import { defineConfig } from 'vitest/config';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit'
-// import { createHtmlPlugin } from 'vite-plugin-html';
-import { VitePWA } from 'vite-plugin-pwa';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 export default defineConfig({
 	plugins: [
 		sveltekit(),
-		// createHtmlPlugin({
-		// 	minify: true,
-		// }),
-		SvelteKitPWA(),
-		VitePWA({
+		createHtmlPlugin({
+			minify: true,
+		}),
+		SvelteKitPWA({
 			registerType: 'autoUpdate',
 			manifest: {
 				name: 'Idol Board',
