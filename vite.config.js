@@ -11,6 +11,7 @@ export default defineConfig({
 		}),
 		SvelteKitPWA({
 			registerType: 'autoUpdate',
+			includeAssets: ['favicon.png', 'robot.txt'],
 			manifest: {
 				name: 'Idol Board',
 				short_name: 'IdolBoard',
@@ -18,12 +19,26 @@ export default defineConfig({
 				categories: ['idol', 'fanclub', 'cgm48'],
 				theme_color: '#1d618e',
 				background_color: '#2e2e34',
+				icons: [
+					{
+						src: 'favicon.png',
+						sizes: '192x192',
+						type: 'image/png'
+					},
+					{
+						src: 'favicon.png',
+						sizes: '512x512',
+						type: 'image/png'
+					}
+				]
 				display: 'standalone',
 				orientation: 'landscape',
 				id: '/',
 				scope: '/',
 				start_url: '/',
-			},
+			}, workbox: {
+				globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+			}
 		}),
 	],
 	server: {
