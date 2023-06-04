@@ -26,7 +26,7 @@ export default defineConfig({
 				scope: '/',
 				start_url: '/',
 			},
-		})
+		}),
 	],
 	server: {
 		port: 4127,
