@@ -38,13 +38,11 @@
     <Text8 {name} on:next={handleNext}/>
     {:else if cnt == 8}
     <Text9 {name} on:next={handleNext}/>
-    <!-- {:else if cnt == 9}
-    <Text10 {name} on:next={handleNext}/> -->
     {:else if cnt == 9}
     <Text10 {name} on:next={handleNext}/>
-    {:else if cnt == 1}
+    <!-- {:else if cnt == 1}
     <Text2 {name} on:next={handleNext}/>
-    <p>3</p>
+    <p>3</p> -->
     {/if}
 <!-- </div> -->
 <div class="absolute bottom-0 w-screen justify-between flex flex-row p-8 text-base sm:text-xl">
