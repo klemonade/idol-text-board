@@ -36,7 +36,7 @@
 <style>
   .ml2 {
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.9em;
   }
 
   .ml2 .letter {

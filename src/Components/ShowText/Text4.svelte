@@ -64,7 +64,7 @@
 .ml5 {
   position: relative;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 1.9em;
   color: #ffffff;
 }
 

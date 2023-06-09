@@ -54,7 +54,7 @@ anime.timeline({loop: true})
 <style>
 .ml11 {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.9em;
 }
 
 .ml11 .text-wrapper {

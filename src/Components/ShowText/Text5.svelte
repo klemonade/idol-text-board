@@ -9,7 +9,7 @@
 anime.timeline({loop: true})
   .add({
     targets: '.ml6 .letter',
-    translateY: ["1.1em", 0],
+    translateY: ["1.15em", 0],
     translateZ: 0,
     duration: 750,
     delay: (el, i) => 50 * i
@@ -41,7 +41,7 @@ anime.timeline({loop: true})
 .ml6 {
   position: relative;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.9em;
 }
 
 .ml6 .text-wrapper {

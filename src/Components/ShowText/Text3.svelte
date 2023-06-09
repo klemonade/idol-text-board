@@ -80,7 +80,7 @@
 .ml4 {
   position: relative;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.9em;
 }
 .ml4 .letters {
   position: absolute;
