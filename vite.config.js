@@ -1,15 +1,13 @@
-import { sveltekit } from '@sveltejs/kit/vite'
-import { defineConfig } from 'vitest/config';
-import { SvelteKitPWA } from '@vite-pwa/sveltekit'
-import { createHtmlPlugin } from 'vite-plugin-html';
+import { sveltekit } from '@sveltejs/kit/vite';
+// import { SvelteKitPWA } from '@vite-pwa/sveltekit'
+import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa';
 
-export default defineConfig({
+/** @type {import('vite').UserConfig} */
+const config = defineConfig({
 	plugins: [
 		sveltekit(),
-		createHtmlPlugin({
-			minify: true,
-		}),
-		SvelteKitPWA({
+		VitePWA({
 			registerType: 'autoUpdate',
 			includeAssets: ['favicon.png', 'robot.txt'],
 			manifest: {
@@ -33,18 +31,14 @@ export default defineConfig({
 				],
 				display: 'standalone',
 				orientation: 'landscape',
-				id: '/',
-				scope: '/',
-				start_url: '/',
+				// id: '/',
+				// scope: '/',
+				// start_url: '/',
 			}, workbox: {
 				globPatterns: ['**/*.{js,css,html,ico,png,svg}']
 			}
 		}),
 	],
-	server: {
-		port: 4127,
-	},
-	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
-	}
-});
+})
+
+export default config
